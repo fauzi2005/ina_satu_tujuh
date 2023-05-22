@@ -63,6 +63,11 @@ class DeretBloc extends Bloc<DeretEvent, DeretState> {
     List<String> loop = [];
 
     for(int i = 1; i <= event.number; i++) {
+      if(i % 5 == 0 && i % 7 == 0) {
+        loop.add("LIMA TUJUH");
+        continue;
+      }
+
       if(i % 5 == 0) {
         loop.add("LIMA");
         continue;
