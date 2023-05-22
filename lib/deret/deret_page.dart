@@ -109,8 +109,11 @@ class _DeretPageState extends State<DeretPage> {
                   const SizedBox(height: 10),
                   const Text('Result'),
                   const SizedBox(height: 10),
-                  SingleChildScrollView(
-                    child: Text(result, style: const TextStyle(fontSize: 30),)
+                  Expanded(
+                    child: SingleChildScrollView(
+                      physics: AlwaysScrollableScrollPhysics(),
+                      child: Text(result, style: const TextStyle(fontSize: 30),)
+                    ),
                   )
                 ],
               ),
